@@ -21,7 +21,9 @@ module.exports = babelJest.createTransformer({
         runtime: hasJsxRuntime ? 'automatic' : 'classic',
       },
     ],
+    [require.resolve('@emotion/babel-preset-css-prop')],
   ],
+  plugins: ['@emotion/babel-plugin'],
   babelrc: false,
   configFile: false,
 });

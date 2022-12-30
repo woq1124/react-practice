@@ -22,7 +22,12 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'off',
     'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.spec.*', '**/*.stories.*'] }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/*.spec.*', '**/*.stories.*', './config/**/*.js', './scripts/*.js'],
+      },
+    ],
     'no-shadow': 'off',
     'react/jsx-uses-react': 'off',
     'react/no-unknown-property': ['error', { ignore: ['css'] }],
