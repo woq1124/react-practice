@@ -34,7 +34,14 @@ function App() {
           <input type='number' value={height} onChange={(e) => setHeight(Number(e.target.value))} />
         </label>
       </div>
-      <div css={{ width: '1200px', height: '500px', padding: '8px', border: '1px solid #000' }}>
+      <div
+        css={{
+          width: '1500px',
+          height: '700px',
+          padding: '8px',
+          border: '1px solid #000',
+        }}
+      >
         <Canvas width={width} height={height} graphs={[...mock]} getXValue={(g) => g.date}>
           {enableLeftGraph ? (
             <BarStack

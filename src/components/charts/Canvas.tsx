@@ -137,7 +137,11 @@ function Canvas({
   return (
     <ParentSize>
       {({ width: parentWidth, height: parentHeight }) => (
-        <CanvasComponent {...props} width={width || parentWidth} height={height || parentHeight} />
+        <CanvasComponent
+          {...props}
+          width={width && width < parentWidth ? width : parentWidth}
+          height={height && height < parentHeight ? height : parentHeight}
+        />
       )}
     </ParentSize>
   );
