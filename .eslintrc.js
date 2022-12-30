@@ -23,10 +23,12 @@ module.exports = {
     'import/no-default-export': 'off',
     'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.spec.*', '**/*.stories.*'] }],
+    'no-shadow': 'off',
     'react/jsx-uses-react': 'off',
     'react/no-unknown-property': ['error', { ignore: ['css'] }],
     'react/react-in-jsx-scope': 'off',
     'typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
   settings: {
     'import/extensions': ['.js', '.jsx', 'ts', 'tsx'],
